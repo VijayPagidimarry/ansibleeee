@@ -1,0 +1,12 @@
+--- 
+- name: playbook to install apache
+  become: true
+  hosts: all
+  tasks: 
+    - name: installing apache
+      apt: 
+        name: apache2
+        update_cache: yes
+        state: present
+    
+        
